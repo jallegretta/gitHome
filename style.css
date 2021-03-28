@@ -1,18 +1,26 @@
 body {
     background: rgb(0, 0, 0);
+    color: white;
+    margin:35%;
+    margin-top:5%;
   }
 
 container {
-    justify-content: center;  
-    font: white;
+    justify-content: center;
     width: auto;
     height: auto;
     padding: 10px;
 }
 
-portrait {
-    border: 1px solid #ddd;
+.personal {
     border-radius: 4px;
-    padding: 5px;
+    padding: 1px;
+    margin: 5px;
     width: 150px;
+    display:flex;
+  }
+
+  .personal p {
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
