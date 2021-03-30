@@ -9,18 +9,20 @@ container {
     justify-content: center;
     width: auto;
     height: auto;
-    padding: 10px;
+    
 }
 
 .personal {
-    border-radius: 4px;
-    padding: 1px;
-    margin: 5px;
-    width: 150px;
+    
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    width: 122px;
     display:flex;
   }
 
   .personal p {
+    margin-left: 15px;
     font-size: large;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
