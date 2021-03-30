@@ -5,11 +5,26 @@ const jobs = [
     { name: "Baldwin Schools", jobTitle: "IT Consultant", responsibilities: "Customer support, Security systems, Hardware installation" },
   ];
 
-  for(let i = 0; i < jobs.length; i++) {
-      let h3 = jobs[i].getElementsByTagName("h3")[0];
-      let h4 = jobs[i].getElementsByTagName("h4")[0];
-      let ul = jobs[i].getElementsByTagName("ul")[0];
-      h3.innerText = h3.innerText.replace("Name of job", jobs[i].name)
-      h4.innerText = h4.innerText.replace("Title or position", jobs[i].jobTitle)
-      ul.innerText = ul.innerText.replace("task", jobs[i].responsibilities)
-  }
+let containerWork = document.getElementsByClassName('container-work')[0];
+
+function createCardFromJob(job){
+    card = document.createElement('div')
+    card.innerHtml = 
+`   <h3>${job.name}</h3>
+    <h4>${job.jobTitle}</h4>
+    <h5>Responsibilities</h5>
+    <ul></ul>
+`
+ul = card.getElementsByTagName('ul')[0];
+for (i = 0; i < job.responsibilities.length; i++) {
+    li = document.createElement('li')
+    li.innerText = job.responsibilities[i]
+    ul.appendChild(li);
+    }
+    return card
+}
+
+for (let i = 0; i < jobs.length; i++){
+    card = createCardFromJob(jobs[i]);
+    containerWork.appendChild(card);
+}
